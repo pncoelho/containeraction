@@ -16,4 +16,4 @@ jobs:
           greeting: 'Coelho, Pedro'
       # Use the output from the `conmem` step
       - name: Output the container memory
-        run: echo "Total memory is ${{ steps.conmem.outputs.time }}"
+        run: echo "Total memory is ${{ steps.conmem.outputs.memory }}"
