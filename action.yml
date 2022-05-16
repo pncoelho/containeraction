@@ -8,7 +8,7 @@ inputs:
     default: 'Awesome Guru'
 outputs:
   memory: # id of output
-    description: 'The container's memory
+    description: "The container's memory"
 runs:
   using: 'docker'
   image: 'Dockerfile'
