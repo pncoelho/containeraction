@@ -1,0 +1,19 @@
+on: [push]
+
+jobs:
+  container_memory_job:
+    runs-on: ubuntu-latest
+    name: A job to display container memory
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Get container memory
+        id: conmem
+        uses: ./ # Uses an action in the root directory
+        with:
+          greeting: 'Coelho, Pedro'
+      # Use the output from the `conmem` step
+      - name: Output the container memory
+        run: echo "Total memory is ${{ steps.conmem.outputs.time }}"
