@@ -1,0 +1,15 @@
+# ~/containeraction/action.yml
+name: 'Container Memory'
+description: 'Shows the memory status of the container'
+inputs:
+  greeting: # id of input
+    description: 'greeting to use'
+    required: true
+    default: 'Awesome Guru'
+outputs:
+  memory: # id of output
+    description: 'The container's memory
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
